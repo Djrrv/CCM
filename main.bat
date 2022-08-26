@@ -22,7 +22,7 @@ netsh interface set interface "WIFI" disabled
 pause
 :shouye1
 cls
-title CCM 6.0 现在是北京时间 %date%
+title CCM 7.22.8.26Beta 现在是北京时间 %date%
 color 6F
 echo                                                            选择
 echo        1.检查更新 2.关网络 3.实验室  4.关机 5.弹出c盘 6.更新日志 7.网络测压 8.退出 9.内测入口
