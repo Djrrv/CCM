@@ -19,3 +19,21 @@ CCM Beta 已更新至 22.8.26Beta版本!
 此版本包含了程序基底逻辑修复!
 希望您能使用 CCM Beta 的体验变的更有趣，更高效!
 # English Version
+## Introduction to CCM_TOOLS
+CCM took the lead in creating iTianQi: "Management Tools for Cloud Computing"\
+CCM from 2022/6 is a great epic in cloud computing tools.
+## Copyright statement
+CCM authors allow everyone to make modifications and optimizations to CCM within a limited range, but they are never allowed to copy the code!
+The software is protected by international copyright laws and international conventions, "Copyright Law of the People's Republic of China", "Regulations on the Protection of Computer Software of the People's Republic of China" and "Copyright Law of the United States of America". With the permission of the author and the issuance of a license, anyone who uses or tries it should abide by the relevant local regulations. Any infringement will be subject to the most severe civil and criminal penalties, and known offenders will be given comprehensive sanctions within the scope of the law.
+## Beta version and stable version
+The beta version is released on ysepan.
+Stable update after 2 beta rounds
+## Release Notes 22.8.25
+CCM Beta has been updated to version 22.8.25Beta!
+This release includes the closed beta features you've come to expect!
+Includes PC Killer, Performance Dashboard and more...
+Hope your experience with CCM Beta becomes more fun and efficient!
+## Release Notes 22.8.26
+CCM Beta has been updated to version 22.8.26Beta!
+This release includes a program base logic fix!
+Hope your experience with CCM Beta becomes more fun and efficient!
