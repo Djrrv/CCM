@@ -61,10 +61,6 @@ set /p q=输入ip或网址:
 :dddstart
 cls
 ping %q% -t -l 65500
-:firstpage
-echo 暂无，按任意键返回
-pause
-goto shouye1
 :editor
 exit
 :testing
