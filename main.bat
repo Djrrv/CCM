@@ -2,7 +2,7 @@
 cls
 :chkupd
 echo => XZV.txt
-echo 8.0_220831_2>XZV.txt
+echo 8.0_220831_2_1>XZV.txt
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/nowv.txt', 'nowv.txt')"
 fc nowv.txt xzv.txt
 if errorlevel==1 goto upd
@@ -21,18 +21,18 @@ shutdown -r -t 1
 pause
 :offinternet
 cls
-netsh interface set interface "ÒÔÌ«Íø" disabled
-netsh interface set interface "ÍøÂç" disabled
+netsh interface set interface "ä»¥å¤ªç½‘" disabled
+netsh interface set interface "ç½‘ç»œ" disabled
 netsh interface set interface "WLAN" disabled
 netsh interface set interface "WIFI" disabled
 pause
 :shouye1
 cls
-title CCM 22.8.31Beta ÏÖÔÚÊÇ±±¾©Ê±¼ä %date%
+title CCM 22.8.31Beta ç°åœ¨æ˜¯åŒ—äº¬æ—¶é—´ %date%
 color 6F
-echo                                                            Ñ¡Ôñ
-echo        1.¼ì²é¸üĞÂ 2.¹ØÍøÂç 3.ÊµÑéÊÒ  4.¹Ø»ú 5.µ¯³öcÅÌ 6.¸üĞÂÈÕÖ¾ 7.ÍøÂç²âÑ¹ 8.ÍË³ö 9.ÄÚ²âÈë¿Ú
-set /p a=ÇëÑ¡Ôñ 
+echo                                                            é€‰æ‹©
+echo        1.æ£€æŸ¥æ›´æ–° 2.å…³ç½‘ç»œ 3.å®éªŒå®¤  4.å…³æœº 5.å¼¹å‡ºcç›˜ 6.æ›´æ–°æ—¥å¿— 7.ç½‘ç»œæµ‹å‹ 8.é€€å‡º 9.å†…æµ‹å…¥å£
+set /p a=è¯·é€‰æ‹© 
 if /i '%a%'=='1' goto chkupd
 if /i '%a%'=='2' goto offinternet
 if /i '%a%'=='3' goto firstpage
@@ -45,21 +45,21 @@ if /i '%a%'=='9' goto testing
 goto shouye1
 :updatelog
 cls
-echo 2.0ÈÕÖ¾
-echo 1.0ÊºÉ½´úÂë È«²¿ÖØ¹¹
-echo Ê¹ÓÃĞÂÂß¼­£¬Ğ§ÂÊÉÏÉı50%
-echo 3.0ÈÕÖ¾
-echo Éµ±ÆÊºÉ½´úÂë¸ù±¾Ğ´²»ÏÂÈ¥ 3.0¼ÌĞøÓÅ»¯
-echo 4.0ÈÕÖ¾ Ãû³Æ¸ÄÎªCCM(CloudComputerManager)
-echo 5.0ÈÕÖ¾ ´úÂëÏà±È1.0»ù±¾È«²¿ÖØ¹¹£¬ÒÆ³ıÒ»Ğ©ÈİÒ×µ¼ÖÂbugµÄ¹¦ÄÜ
-echo 6.0ÈÕÖ¾È±Ê§
-echo 7.0ĞŞ¸´Ò»Ğ©µ×²ãbug
-echo 8.0Ìí¼Ó¹¦ÄÜ,´ò¿ª×Ô¶¯¼ì²é¸üĞÂ
+echo 2.0æ—¥å¿—
+echo 1.0å±å±±ä»£ç  å…¨éƒ¨é‡æ„
+echo ä½¿ç”¨æ–°é€»è¾‘ï¼Œæ•ˆç‡ä¸Šå‡50%
+echo 3.0æ—¥å¿—
+echo å‚»é€¼å±å±±ä»£ç æ ¹æœ¬å†™ä¸ä¸‹å» 3.0ç»§ç»­ä¼˜åŒ–
+echo 4.0æ—¥å¿— åç§°æ”¹ä¸ºCCM(CloudComputerManager)
+echo 5.0æ—¥å¿— ä»£ç ç›¸æ¯”1.0åŸºæœ¬å…¨éƒ¨é‡æ„ï¼Œç§»é™¤ä¸€äº›å®¹æ˜“å¯¼è‡´bugçš„åŠŸèƒ½
+echo 6.0æ—¥å¿—ç¼ºå¤±
+echo 7.0ä¿®å¤ä¸€äº›åº•å±‚bug
+echo 8.0æ·»åŠ åŠŸèƒ½,æ‰“å¼€è‡ªåŠ¨æ£€æŸ¥æ›´æ–°
 pause
 goto shouye1
 :ddos
 cls
-set /p q=ÊäÈëip»òÍøÖ·:
+set /p q=è¾“å…¥ipæˆ–ç½‘å€:
 :dddstart
 cls
 ping %q% -t -l 65500
@@ -70,26 +70,26 @@ cls
 echo Please Type Code Here To Unlock
 set /p edf=
 if /i '%edf%'=='10010' goto tmonitor
-echo ÊäÈë´í
+echo è¾“å…¥é”™
 pause
 exit
 :tmonitor
 cls
-echo 1.ĞÔÄÜ¼ì²â°æ 2.µçÄÔÉ±ÊÖ 
-set /p asdsdsdsd=ÇëÑ¡Ôñ 
+echo 1.æ€§èƒ½æ£€æµ‹ç‰ˆ 2.ç”µè„‘æ€æ‰‹ 
+set /p asdsdsdsd=è¯·é€‰æ‹© 
 if /i '%asdsdsdsd%'=='1' goto smoitor
 if /i '%asdsdsdsd%'=='2' goto killerqueen
 :smoitor
-::fbxwcnm£¬²»ÏëĞ´ÁË
+::fbxwcnmï¼Œä¸æƒ³å†™äº†
 resmon
 :killerqueen
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools /t reg_dword /d 00000001 /
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools/tREG_DWORD/d1/f
 :upd
 cls
-echo ÓĞĞÂ°æ±¾¸üĞÂ!
-echo ÇëÑ¡ÔñÔ´
-set /p asdsdsdsd=1.githubÔ´ 2.giteeÔ´
+echo æœ‰æ–°ç‰ˆæœ¬æ›´æ–°!
+echo è¯·é€‰æ‹©æº
+set /p asdsdsdsd=1.githubæº 2.giteeæº
 if /i '%asdsdsdsd%'=='1' goto huby
 if /i '%asdsdsdsd%'=='2' goto eey
 goto upd
