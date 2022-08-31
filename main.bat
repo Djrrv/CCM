@@ -4,8 +4,6 @@ cls
 echo => XZV.txt
 echo 8.0_220831_2>XZV.txt
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/nowv.txt', 'nowv.txt')"
-nowv.txt
-xzv.txt
 fc nowv.txt xzv.txt
 if errorlevel==1 goto upd
 goto shouye1
