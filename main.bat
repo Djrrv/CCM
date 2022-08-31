@@ -2,7 +2,7 @@
 cls
 :chkupd
 echo => XZV.txt
-echo 8.0_220831>XZV.txt
+echo 8.0_220831_2>XZV.txt
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/nowv.txt', 'nowv.txt')"
 nowv.txt
 xzv.txt
