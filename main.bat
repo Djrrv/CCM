@@ -1,5 +1,13 @@
 @echo off
 cls
+:chkupd
+echo => XZV.txt
+echo 8.0_220831>XZV.txt
+powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/nowv.txt', 'nowv.txt')"
+nowv.txt
+xzv.tct
+fc nowv.txt xzv.txt
+if errorlevel==1 goto upd
 goto shouye1
 :mountvol
 cls
@@ -27,7 +35,7 @@ color 6F
 echo                                                            选择
 echo        1.检查更新 2.关网络 3.实验室  4.关机 5.弹出c盘 6.更新日志 7.网络测压 8.退出 9.内测入口
 set /p a=请选择 
-if /i '%a%'=='1' goto cheup
+if /i '%a%'=='1' goto chkupd
 if /i '%a%'=='2' goto offinternet
 if /i '%a%'=='3' goto firstpage
 if /i '%a%'=='4' goto shutdown
@@ -52,7 +60,7 @@ echo 4.0日志 名称改为CCM(CloudComputerManager)
 echo 5.0日志 代码相比1.0基本全部重构，移除一些容易导致bug的功能
 echo 6.0日志缺失
 echo 7.0修复一些底层bug
-echo 8.0添加功能
+echo 8.0添加功能,打开自动检查更新
 pause
 goto shouye1
 :ddos
@@ -83,3 +91,9 @@ resmon
 :killerqueen
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools /t reg_dword /d 00000001 /
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools/tREG_DWORD/d1/f
+:upd
+cls
+echo 有新版本更新!
+echo 按任意键到官网下载
+pause
+start https://github.com/Djrrv/CCM/blob/main/main.bat
