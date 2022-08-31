@@ -24,6 +24,9 @@ CCM Beta 已更新至 22.8.26Beta版本!
 版本号将由X.YY.MM.DD变为YY.MM.DD
 例:8.22.8.31--22.8.31
 希望您能使用 CCM Beta 的体验变的更有趣，更高效!
+## 版本说明 22.8.31U
+此版本包含了自动检查更新!
+希望您能使用 CCM Beta 的体验变的更有趣，更高效!
 # English Version
 ## Introduction to CCM_TOOLS
 CCM took the lead in creating iTianQi: "Management Tools for Cloud Computing"\
@@ -48,4 +51,7 @@ This version has been merged into CCM_Stable 8.0!
 This release contains the latest feature updates.
 The version number will change from X.YY.MM.DD to YY.MM.DD
 Example: 8.22.8.31--22.8.31
+Hope your experience with CCM Beta becomes more fun and efficient!
+## Release Notes 22.8.31U
+This release includes an automatic check for updates!
 Hope your experience with CCM Beta becomes more fun and efficient!
