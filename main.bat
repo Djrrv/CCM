@@ -2,7 +2,7 @@
 cls
 :chkupd
 echo => XZV.txt
-echo 8.0_220831_2>XZV.txt
+echo 8.0_220831_2_1>XZV.txt
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/nowv.txt', 'nowv.txt')"
 fc nowv.txt xzv.txt
 if errorlevel==1 goto upd
@@ -96,11 +96,7 @@ goto upd
 :huby
 cls
 powershell "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Djrrv/CCM/main/main.bat', 'main.bat')"
-echo 下载完成!请手动打开。
-pause
-exit
+goto shouye1
 :eey
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/main.bat', 'main.bat')"
-echo 下载完成!请手动打开。
-pause
-exit
+goto shouye1
