@@ -5,7 +5,7 @@ echo => XZV.txt
 echo 8.0_220831>XZV.txt
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/nowv.txt', 'nowv.txt')"
 nowv.txt
-xzv.tct
+xzv.txt
 fc nowv.txt xzv.txt
 if errorlevel==1 goto upd
 goto shouye1
@@ -45,10 +45,6 @@ if /i '%a%'=='7' goto ddos
 if /i '%a%'=='8' goto editor
 if /i '%a%'=='9' goto testing
 goto shouye1
-:cheup
-cls
-start http:\\batexe.ysepan.com
-goto shouye1 
 :updatelog
 cls
 echo 2.0日志
