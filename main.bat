@@ -90,6 +90,19 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Sy
 :upd
 cls
 echo 有新版本更新!
-echo 按任意键到官网下载
+echo 请选择源
+set /p asdsdsdsd=1.github源 2.gitee源
+if /i '%asdsdsdsd%'=='1' goto huby
+if /i '%asdsdsdsd%'=='2' goto eey
+goto upd
+:huby
+cls
+powershell "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Djrrv/CCM/main/main.bat', 'main.bat')"
+echo 下载完成!请手动打开。
 pause
-start https://github.com/Djrrv/CCM/blob/main/main.bat
+exit
+:eey
+powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/main.bat', 'main.bat')"
+echo 下载完成!请手动打开。
+pause
+exit
