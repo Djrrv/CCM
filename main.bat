@@ -22,7 +22,7 @@ netsh interface set interface "WIFI" disabled
 pause
 :shouye1
 cls
-title CCM 7.22.8.26Beta 现在是北京时间 %date%
+title CCM 22.8.31Beta 现在是北京时间 %date%
 color 6F
 echo                                                            选择
 echo        1.检查更新 2.关网络 3.实验室  4.关机 5.弹出c盘 6.更新日志 7.网络测压 8.退出 9.内测入口
@@ -52,7 +52,7 @@ echo 4.0日志 名称改为CCM(CloudComputerManager)
 echo 5.0日志 代码相比1.0基本全部重构，移除一些容易导致bug的功能
 echo 6.0日志缺失
 echo 7.0修复一些底层bug
-echo 7.22.8.25Beta加内侧入口
+echo 8.0添加功能
 pause
 goto shouye1
 :ddos
