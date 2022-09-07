@@ -27,9 +27,12 @@ CCM Beta 已更新至 22.8.26Beta版本!
 ## 版本说明 22.8.31U
 此版本包含了自动检查更新!
 希望您能使用 CCM Beta 的体验变的更有趣，更高效!
+## 版本说明 9.0Beta
+此版本包含了 输出日志 以及 HuaruiKillerLite
+希望您能使用 CCM Beta 的体验变的更有趣，更高效!
 # English Version
 ## Introduction to CCM_TOOLS
-CCM took the lead in creating iTianQi: "Management Tools for Cloud Computing"\
+CCM took the lead in creating Djrrv: "Management Tools for Cloud Computing"\
 CCM from 2022/6 is a great epic in cloud computing tools.
 ## Copyright statement
 CCM authors allow everyone to make modifications and optimizations to CCM within a limited range, but they are never allowed to copy the code!
