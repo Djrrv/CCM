@@ -58,3 +58,6 @@ Hope your experience with CCM Beta becomes more fun and efficient!
 ## Release Notes 22.8.31U
 This release includes an automatic check for updates!
 Hope your experience with CCM Beta becomes more fun and efficient!
+## Release Notes 9.0Beta
+This release includes output logs and HuaruiKillerLite
+Hope your experience with CCM Beta becomes more fun and efficient!
