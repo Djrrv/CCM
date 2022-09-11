@@ -30,6 +30,10 @@ CCM Beta 已更新至 22.8.26Beta版本!
 ## 版本说明 9.0Beta
 此版本包含了 输出日志 以及 HuaruiKillerLite
 希望您能使用 CCM Beta 的体验变的更有趣，更高效!
+## 版本说明 10.0 Stable
+此版本包含了最新的Bat编辑器!
+我们正在朝着实用的方向发展!
+希望您能使用 CCM Stable 的体验变的更有趣，更高效!
 # English Version
 ## Introduction to CCM_TOOLS
 CCM took the lead in creating Djrrv: "Management Tools for Cloud Computing"\
@@ -61,3 +65,7 @@ Hope your experience with CCM Beta becomes more fun and efficient!
 ## Release Notes 9.0Beta
 This release includes output logs and HuaruiKillerLite
 Hope your experience with CCM Beta becomes more fun and efficient!
+## Release Notes 10.0 Stable
+This release includes the latest Bat editor!
+We are moving in a practical direction!
+Hope your experience with CCM Stable becomes more fun and efficient!
