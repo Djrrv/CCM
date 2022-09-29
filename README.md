@@ -34,6 +34,15 @@ CCM Beta 已更新至 22.8.26Beta版本!
 此版本包含了最新的Bat编辑器!
 我们正在朝着实用的方向发展!
 希望您能使用 CCM Stable 的体验变的更有趣，更高效!
+## 版本说明 Xeon Stable
+我们将CCM-Beta与CCM-Stable再次合并
+此版本添加了更多实用功能
+希望您能使用 CCM Stable 的体验变的更有趣，更高效!
+## 版本说明 12 Stable
+修复:修复 9号功能 在Windows7上无法使用
+添加:五子棋游戏
+此版本添加了更多实用功能
+希望您能使用 CCM Stable 的体验变的更有趣，更高效!
 # English Version
 ## Introduction to CCM_TOOLS
 CCM took the lead in creating Djrrv: "Management Tools for Cloud Computing"\
@@ -68,4 +77,13 @@ Hope your experience with CCM Beta becomes more fun and efficient!
 ## Release Notes 10.0 Stable
 This release includes the latest Bat editor!
 We are moving in a practical direction!
+Hope your experience with CCM Stable becomes more fun and efficient!
+## Release notes Xeon Stable
+We merged CCM-Beta with CCM-Stable again
+This release adds more useful features
+Hope your experience with CCM Stable becomes more fun and efficient!
+## Release Note 12 Stable
+Fix: Fix feature 9 not available on Windows 7
+Added: Backgammon game
+This release adds more useful features
 Hope your experience with CCM Stable becomes more fun and efficient!
