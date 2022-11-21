@@ -43,6 +43,12 @@ CCM Beta 已更新至 22.8.26Beta版本!
 添加:五子棋游戏
 此版本添加了更多实用功能
 希望您能使用 CCM Stable 的体验变的更有趣，更高效!
+## 版本说明 13
+此版本添加了更多实用功能
+希望您能使用 CCM Stable 的体验变的更有趣，更高效!
+## 版本说明 14.1
+优化程序稳定性，刷版本号
+希望您能使用 CCM Stable 的体验变的更有趣，更高效!
 # English Version
 ## Introduction to CCM_TOOLS
 CCM took the lead in creating Djrrv: "Management Tools for Cloud Computing"\
