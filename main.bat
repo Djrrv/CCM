@@ -1,60 +1,41 @@
-::[Bat To Exe Converter]
-::
-::YAwzoRdxOk+EWAjk
-::fBw5plQjdCWDJAjK/UE/SA==
-::YAwzuBVtJxjWCl3EqQJgSA==
-::ZR4luwNxJguZRRnk
-::Yhs/ulQjdF+5
-::cxAkpRVqdFKZSjk=
-::cBs/ulQjdF+5
-::ZR41oxFsdFKZSDk=
-::eBoioBt6dFKZSDk=
-::cRo6pxp7LAbNWATEpCI=
-::egkzugNsPRvcWATEpCI=
-::dAsiuh18IRvcCxnZtBJQ
-::cRYluBh/LU+EWAnk
-::YxY4rhs+aU+IeA==
-::cxY6rQJ7JhzQF1fEqQITCzY0
-::ZQ05rAF9IBncCkqN+0xwdVt3byni
-::ZQ05rAF9IAHYFVzEqQITCzY0
-::eg0/rx1wNQPfEVWB+kM9LVsJDCehEQs=
-::fBEirQZwNQPfEVWB+kM9LVsJDCehEQs=
-::cRolqwZ3JBvQF1fEqQITCzY0
-::dhA7uBVwLU+EWHqn2SI=
-::YQ03rBFzNR3SWATE12EdSA==
-::dhAmsQZ3MwfNWATE12EdSA==
-::ZQ0/vhVqMQ3MEVWAtB9wCzh5LA==
-::Zg8zqx1/OA3MEVWAtB9wCzh5LA==
-::dhA7pRFwIByZRRmn129Q
-::YB416Ek+ZG8=
-::
-::
-::978f952a14a936cc963da21a135fa983
+::低级语言Bat写的
+::编程语言简单适合新手学习
+::计算机课不如写这个捏
 @echo off
+set version=CCM 14.1.0 QWDNTAO
+set buildtype=Stable
+set coreversion=13.0.1.0 EACABYQ
+:startofccm
+echo 我们更新了用户协议
+::这里需要我解释吗 用户协议
+set /p aqqa=1 查看用户协议 2 同意用户协议 不同意用户协议请直接右上角退出
+if /i '%aqqa%'=='1' goto chkuserguide
+if /i '%aqqa%'=='2' goto chkupdif
+:chkupdif
 echo 如果需要使用关网络 请右键管理员运行，本程序不自动提权
 echo 是否需要检查更新？
+::这里需要我解释吗 是否检查更新
 set /p aqq=1 是 2 不是 没网时候别检查更新
 if /i '%aqq%'=='1' goto chkupd
 if /i '%aqq%'=='2' goto shouyeone
-echo > CCM.log
 cls
 :chkupd
 del /s /q XZV.txt
 del /s /q nowv.txt
-echo %date%%time% Open Chkupd>>CCM.log
+::删除原有CCM10.0以下残留文件
 echo => XZV.txt
 echo 12.0_220929>XZV.txt
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/nowv.txt', 'nowv.txt')"
 fc nowv.txt xzv.txt
+::下载并对比版本号
 if errorlevel==1 goto upd
-echo %date%%time% Done Version Check>>CCM.log
+::不一致跳转至更新页面
 goto shouye1
 :mountvol
 cls
 mountvol c:\ /d
 pause
 :shutdown
-echo %date%%time% Open Std>>CCM.log
 :choiceofstd
 cls
 echo 是否使用新方案?
@@ -71,13 +52,12 @@ cls
 sildetoshutdown
 pause
 :reboot
-echo %date%%time% Open Reboot>>CCM.log
 cls
 shutdown -r -t 1
 pause
 :offinternet
-echo %date%%time% Open OffInternet>>CCM.log
 cls
+::关闭所有网络连接
 netsh interface set interface "以太网" disabled
 netsh interface set interface "网络" disabled
 netsh interface set interface "WLAN" disabled
@@ -85,14 +65,14 @@ netsh interface set interface "WIFI" disabled
 netsh interface set interface "本地连接" disabled
 pause
 :shouye1
+::不再解释
 del /s /q XZV.txt
 del /s /q nowv.txt
 cls
-title CCM 12 现在是北京时间 %date%
+title %version% 保留所有权利 现在是北京时间 %date%
 color 6F
-echo %date%%time% Open Shouye>>CCM.log
 echo                                                            选择
-echo        1.检查更新 2.小游戏 3.HuaRuiKiller Lite  4.关机 5.弹出c盘 6.更新日志 7.网络测压 8.Bat编辑器(试运行) 9.一键逃计算机课 10.退出
+echo        1.检查更新 2.小游戏 3.HuaRuiKiller Lite  4.关机 5.弹出c盘 6.更新日志 7.网络测压 8.Bat编辑器(试运行) 9.一键逃计算机课 10.查看版本号 X.退出
 set /p a=请选择 
 if /i '%a%'=='1' goto chkupd
 if /i '%a%'=='2' goto wuziqi
@@ -103,11 +83,11 @@ if /i '%a%'=='6' goto updatelog
 if /i '%a%'=='7' goto ddos
 if /i '%a%'=='8' goto CCMC19
 if /i '%a%'=='9' goto FuckFbx
-if /i '%a%'=='10' goto editor
+if /i '%a%'=='X' goto editor
+if /i '%a%'=='10' goto chkondev
 goto shouye1
 :updatelog
 cls
-echo %date%%time% Open UpdLog>>CCM.log
 echo 2.0日志
 echo 1.0屎山代码 全部重构
 echo 使用新逻辑，效率上升50%
@@ -124,30 +104,27 @@ echo 12.0 以优化更新为主 去除了一些无用功能以及接口
 pause
 goto shouye1
 :ddos
-echo %date%%time% Open DDOS>>CCM.log
 cls
 set /p q=输入ip或网址:
 :dddstart
-echo %date%%time% DDoS Start>>CCM.log
+::死亡之ping
 cls
 ping %q% -t -l 65500
 :editor
 exit
 :tmonitor
 cls
-echo %date%%time% OpenTMonitor>>CCM.log
 echo 1.性能检测版 2.电脑杀手 
 set /p asdsdsdsd=请选择 
 if /i '%asdsdsdsd%'=='1' goto smoitor
 if /i '%asdsdsdsd%'=='2' goto killerqueen
 :smoitor
-echo %date%%time% Open Resmon>>CCM.log
 resmon
 :killerqueen
+::禁用任务管理器与注册表
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools /t reg_dword /d 00000001 /
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableRegistryTools/tREG_DWORD/d1/f
 :upd
-echo %date%%time% UpdChose >>CCM.log
 cls
 echo 有新版本更新!
 echo 请选择源
@@ -157,26 +134,27 @@ if /i '%asdsdsdsd%'=='2' goto eey
 goto upd
 :huby
 cls
+::从github下载
 powershell "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/Djrrv/CCM/main/main.bat', 'main.bat')"
-echo %date%%time% Dl Upd From Github >>CCM.log
 goto shouye1
 :eey
+::从gitee下载
 powershell "(New-Object Net.WebClient).DownloadFile('https://gitee.com/ganteam/CCMautoupd/raw/master/main.bat', 'main.bat')"
-echo %date%%time% Dl Upd From Gitee >>CCM.log
 goto shouye1
 :HKLite
-echo %date%%time% Open HKLite>>CCM.log
 :ma
 cls
+::设置杀进程次数killcs为0
 set  killcs=0
 :startkill
 echo 第%killcs%次杀进程!
 taskkill /f /im RedAgent.exe
+::杀进程成功，次数+1
 set /a killcs+=1
+::返回开始杀进程
 goto startkill
 :CCMC19
 cls
-echo %date%%time% Open Test Function>>CCM.log
 title Bat Editor
 echo 欢迎来到bat编辑器
 :newproject
@@ -193,7 +171,6 @@ if /i '%aakk%'=='2' goto hkgnb
 if /i '%aakk%'=='3' goto addchoice
 if /i '%aakk%'=='4' goto addfunction
 :sayec
-echo %date%%time% Open Batedit/sayec>>CCM.log
 echo 您要说什么?
 set /p awakk= 
 echo echo %awakk%>>%projectname%.bat
@@ -201,19 +178,16 @@ echo Done!
 pause
 goto startedit
 :hkgnb
-echo %date%%time% Open Batedit/HKgnb>>CCM.log
 echo 这将添加华锐杀手的功能到您的项目里，确定吗？
 pause
 echo :ma>>%projectname%.bat
 echo cls>>%projectname%.bat
 echo taskkill /f /im RedAgent.exe>>%projectname%.bat
 echo goto ma>>%projectname%.bat
-echo %date%%time% Done>>CCM.log
 echo Done
 pause
 goto startedit
 :addchoice
-echo %date%%time% Open Batedit/Addchoice>>CCM.log
 echo 您要问什么?
 set /p Ques= 
 echo 您的变量名?
@@ -256,21 +230,17 @@ echo if /i '%Bname%'=='%pand1%' goto %wherego%>>%projectname%.bat
 goto asking
 goto ENOS
 :ENOS
-echo %date%%time% Done>>CCM.log
 echo Done
 pause
 goto startedit
 :addfunction
-echo %date%%time% Open Batedit/Addfunction>>CCM.log
 echo 请输入你要叫这个功能的名字。
 set /p funame= 
 echo :%funame%>>%projectname%.bat
-echo %date%%time% Done>>CCM.log
 echo Done
 pause
 goto startedit
 :shouyeone
-echo Skip Version Check>>CCM.log
 goto shouye1
 :FuckFbx
 title auto-fuck-fbx
@@ -285,6 +255,7 @@ if /i '%aqq1%'=='2' goto offinternet1
 if /i '%aqq1%'=='3' goto oninternet1
 :offinternet
 cls
+::广斌啊不是关闭所有网络连接
 netsh interface set interface "以太网" disabled
 netsh interface set interface "网络" disabled
 netsh interface set interface "WLAN" disabled
@@ -294,6 +265,7 @@ echo 所有链接已断开！
 pause
 goto shouye1
 :oninternet1
+::恢复网络连接
 netsh interface set interface "以太网" enabled
 netsh interface set interface "网络" enabled
 netsh interface set interface "WLAN" enabled
@@ -427,3 +399,27 @@ for /l %%a in (0,1,21) do (echo    !z%%a!!li%%a!)
 set/p=   !a%zhi%! %zhi%子 第!asc%zhi%!手  胜出     <nul
 pause
 endlocal&goto :restart
+:chkuserguide
+cls
+echo 用户协议
+echo 1.本程序仅为娱乐以及技术交流所用，禁止一切未经有关部门允许的滥用
+echo 2.本程序版权归属KFTeam LLC. 二改请参考github中的二改协议
+echo 3.说白了，你用这程序乱搞出事了不赖作者
+pause
+goto startofccm
+:chkondev
+cls
+echo    __________   __________   ___      __
+echo    /        /   /        /   /  \    /   \
+echo   /   -------   /   -------   / / \ \  / /\  \
+echo   /   /       /   /        / /   \_\/_/  \  \
+echo  /   /______ /   /_______  / /           \  \
+echo  /__________/___________/ /_/             \__\
+echo CCM 内部开发版本
+echo 当前版本号 %version%
+echo 编译时间 %builddate%
+echo 内核 %coreversion%
+echo 内核版本 %buildtype%
+echo 
+pause
+goto shouye1
